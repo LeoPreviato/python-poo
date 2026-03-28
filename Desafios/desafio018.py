@@ -2,11 +2,34 @@ from rich import print
 from rich.panel import Panel
 
 class Churrasco:
+    """
+    Representa um churrasco com nome e quantidade de pessoas.
+    
+    Attributes:
+        nome_churrasco (str): Nome do churrasco.
+        quantidade_pessoas (int): Número de pessoas participantes.
+    """
+    
     def __init__(self, nome_churrasco, quantidade_pessoas):
+        """
+        Inicializa um novo churrasco.
+        
+        Args:
+            nome_churrasco (str): Nome do churrasco.
+            quantidade_pessoas (int): Número de pessoas participantes.
+        """
         self.nome_churrasco = nome_churrasco
         self.quantidade_pessoas = quantidade_pessoas
 
     def analisar_churrasco(self):
+        """
+        Analisa o churrasco e imprime um painel com informações sobre consumo de carne e custos.
+        
+        Calcula o total de carne necessário baseado em 0.4kg por pessoa,
+        o custo total e o valor dividido por pessoa. Imprime um painel formatado
+        com essas informações. Se a quantidade de pessoas for menor ou igual a zero,
+        exibe uma mensagem de erro e retorna sem calcular.
+        """
         if self.quantidade_pessoas <= 0:
             print("[red]ERRO: A quantidade de pessoas deve ser maior que zero![/]")
             return
