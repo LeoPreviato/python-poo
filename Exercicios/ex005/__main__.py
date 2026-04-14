@@ -1,7 +1,7 @@
-from rich import inspect
 from classes_ex005 import Aluno, Professor, Funcionario
 
 def main():
+    """Função principal que demonstra o uso das classes Aluno, Professor e Funcionario."""
     aluno1 = Aluno("Leonardo", 20, "Engenharia de Software", "Turma A")
     aluno1.fazer_aniversario()
     aluno1.fazer_matricula()
